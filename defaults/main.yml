@@ -127,7 +127,7 @@ mariadb_users: []
 mariadb_version: '10.1'
 mariadb_mirror_domain: "ftp.igh.cnrs.fr"
 # See: https://downloads.mariadb.org/mariadb/repositories
-mariadb_repository: "http://{{ mariadb_mirror_domain }}/pub/mariadb/repo/{{ mariadb_version }}/debian"
+mariadb_repository: "http://{{ mariadb_mirror_domain }}/pub/mariadb/repo/{{ mariadb_version }}/{{ ansible_lsb.id | lower }}"
 mariadb_key_server: "keyserver.ubuntu.com"
 mariadb_key_ids: ['0xcbcb082a1bb943db', '0xf1656f24c74cd1d8']
 
